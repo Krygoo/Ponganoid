@@ -44,28 +44,28 @@ void Pickup::activate(int type, Ball& ball, Paddle& paddle)
 	case 1:
 		if (paddle.counter1 < 5)
 		{
-			paddle.multPaddleWidth(1.4);
+			paddle.multPaddleWidth(1.5);
 			paddle.incCounter(paddle.counter1, paddle.counter2);
 			break;
 		}
 	case 2:
 		if (paddle.counter2 < 5)
 		{
-			paddle.multPaddleWidth(0.7);
+			paddle.multPaddleWidth(0.67);
 			paddle.incCounter(paddle.counter2, paddle.counter1);
 			break;
 		}
 	case 3:
 		if (paddle.counter3 < 5)
 		{
-			paddle.multPaddleVelocity(1.2);
+			paddle.multPaddleVelocity(1.25);
 			paddle.incCounter(paddle.counter3, paddle.counter4);
 			break;
 		}
 	case 4:
 		if (paddle.counter4 < 5)
 		{
-			paddle.multPaddleVelocity(0.85);
+			paddle.multPaddleVelocity(0.8);
 			paddle.incCounter(paddle.counter4, paddle.counter3);
 			break;
 		}

@@ -4,8 +4,11 @@ using namespace sf;
 
 Menu::Menu(unsigned int screenWidth, unsigned int screenHeight)
 {
-	font.loadFromFile("arial.ttf");
-	
+	if (!font.loadFromFile("arial.ttf"))
+	{
+		// handle error
+	}
+
 	title.setFont(font);
 	title.setFillColor(Color::Green);
 	title.setOutlineColor(Color::Yellow);
@@ -55,8 +58,8 @@ void Menu::draw(RenderTarget& target, RenderStates state) const
 	for (int i = 0; i < optionsNumber; i++)
 	{
 		target.draw(menu[i]);
+		target.draw(title);
 	}
-	target.draw(title);
 }
 
 void Menu::moveUp()

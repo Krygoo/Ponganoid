@@ -108,7 +108,7 @@ void Paddle::aiUpdate(unsigned int screenwidth, float left, float right, int dif
 		if (time == targetTime)
 		{
 			time = 0;
-			targetTime = rand() % 4 + 1;
+			targetTime = rand() % 5 + 1;
 			int direction = rand() % 100;
 			if (direction < 5)
 				velocity.x = 0;
@@ -193,10 +193,14 @@ void Paddle::addScore(int bonus)
 	this->score += bonus;
 }
 
-void Paddle::setColor(Color & color1, Color & color2)
+void Paddle::setFillColor(Color & color)
 {
-	this->shape.setFillColor(color1);
-	this->shape.setOutlineColor(color2);
+	this->shape.setFillColor(color);
+}
+
+void Paddle::setOutlineColor(Color & color)
+{
+	this->shape.setOutlineColor(color);
 }
 
 Color Paddle::getFillColor()

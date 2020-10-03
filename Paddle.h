@@ -26,7 +26,8 @@ public:
 	void incCounter(int c1, int c2);
 	void reset(float t_X, float t_Y);
 	void addScore(int bonus);
-	void setColor(Color & color1, Color & color2);
+	void setFillColor(Color & color);
+	void setOutlineColor(Color & color);
 
 	Color getFillColor();
 	Color getOutlineColor();
